@@ -213,7 +213,7 @@ function footerHTML() {
   const m = state.summary.meta;
   return `<footer class="foot">
     <span>데이터 출처: 서울열린데이터광장 「서울시 부동산 실거래가 정보」(OA-21275) · 매매 ${fmtCount(m.saleRows)} · 빌드 ${m.builtAt}</span>
-    <a href="about.html">About</a>
+    <a href="../index.html">About</a>
   </footer>`;
 }
 
@@ -452,7 +452,7 @@ function showGuError(slug) {
 function fetchGuData(slug) {
   const entry = state.summary.gu.find(g => g.slug === slug);
   if (!entry) { showGuError(slug); return; }
-  fetch(`data/json/${entry.file}`, { cache: 'no-cache' })
+  fetch(`../data/json/${entry.file}`, { cache: 'no-cache' })
     .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
     .then(data => {
       state.guCache.set(slug, data);
@@ -631,7 +631,7 @@ async function boot() {
   attachListeners();
   renderAppSkeleton();
   try {
-    const res = await fetch('data/json/summary.json', { cache: 'no-cache' });
+    const res = await fetch('../data/json/summary.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const summary = await res.json();
     state.summary = summary;
