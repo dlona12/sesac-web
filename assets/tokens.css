@@ -1,0 +1,52 @@
+/* ===== Montage(Wanted Design System) 디자인 토큰 ===== */
+/* index.html / about.html / index.html(대시보드) 공용. 값은 변경 금지. */
+:root {
+  /* primary */
+  --primary-normal: #0066ff;
+  --primary-strong: #005eeb;
+  --primary-heavy:  #0054d1;
+
+  /* label(text) */
+  --label-strong: #000000;
+  --label-normal: #171719;
+  --label-neutral: rgba(46, 47, 51, 0.88);
+  --label-alt:     rgba(55, 56, 60, 0.61);
+  --label-assist:  rgba(55, 56, 60, 0.28);
+
+  /* background & line & fill */
+  --bg-normal: #ffffff;
+  --bg-alt:    #f7f7f8;
+  --line-solid:   #e1e2e4;
+  --line-neutral: #eaebec;
+  --fill-normal:  rgba(112, 115, 124, 0.08);
+  --fill-strong:  rgba(112, 115, 124, 0.16);
+  --primary-tint: rgba(0, 102, 255, 0.06);
+  --primary-line: rgba(0, 102, 255, 0.28);
+
+  /* status */
+  --status-positive: #00bf40;
+
+  /* elevation */
+  --shadow-small:  0px 2px 4px -2px rgba(23,23,23,0.06), 0px 4px 6px -1px rgba(23,23,23,0.06);
+  --shadow-medium: 0px 4px 6px -2px rgba(23,23,23,0.07), 0px 10px 15px -3px rgba(23,23,23,0.07);
+
+  /* radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --font: "Pretendard Variable", Pretendard, "Wanted Sans Variable", "Wanted Sans",
+          -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo",
+          "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--label-neutral);
+  background: var(--bg-alt);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
